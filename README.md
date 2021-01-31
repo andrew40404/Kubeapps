@@ -67,10 +67,8 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 Use the Helm chart to install the latest version of Kubeapps:
 
 ```sh
-*helm repo add bitnami https://charts.bitnami.com/bitnami*
-
+helm repo add bitnami https://charts.bitnami.com/bitnami
 kubectl create namespace kubeapps
-
 helm install kubeapps --namespace kubeapps bitnami/kubeapps
 ```
 
@@ -90,7 +88,6 @@ You can create a Kubernetes service account and use the API token to authenticat
 
 ```sh
 kubectl create serviceaccount kubeapps-operator
-
 kubectl create clusterrolebinding kubeapps-operator --clusterrole=cluster-admin --serviceaccount=default:kubeapps-operator
 ```
 
@@ -113,4 +110,3 @@ Once you have the Kubeapps Dashboard up and running, you can start deploying app
 - The application will now be deployed. You will be able to track the new Kubernetes deployment directly from the browser
 
 
- 
