@@ -1,6 +1,6 @@
-# Installing Kubeapps on IBM Cloud
+## Installing Kubeapps on IBM Cloud
 
-# **Step 1 provision Kubernetes Cluster**
+**Step 1 provision Kubernetes Cluster**
 
 - Click the **Catalog** button on the top
 
@@ -61,7 +61,7 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 - Give a **name** to this workspace
 - Click **install** and wait for the deployment
 
-# **Step 3 Installing Kubeapps on IBM Cloud**
+**Step 3 Installing Kubeapps on IBM Cloud**
 
 Use the Helm chart to install the latest version of Kubeapps:
 
@@ -81,7 +81,7 @@ kubectl get pods -w --namespace kubeapps
 
 Once it has been deployed and the Kubeapps pods are running, continue to another step.
 
-##  **Create a demo credential with which to access Kubeapps and Kubernetes**
+**Create a demo credential with which to access Kubeapps and Kubernetes**
 
 You can create a Kubernetes service account and use the API token to authenticate with the Kubernetes API server via Kubeapps:
 
@@ -93,7 +93,7 @@ kubectl create clusterrolebinding kubeapps-operator \
    --serviceaccount=default:kubeapps-operator
 ```
 
-## Start the Kubeapps Dashboard
+**Start the Kubeapps Dashboard**
 
 Once Kubeapps is installed, securely access the Kubeapps Dashboard from your system by running:
 
@@ -101,7 +101,7 @@ Once Kubeapps is installed, securely access the Kubeapps Dashboard from your sys
 kubectl port-forward -n kubeapps svc/kubeapps 8080:80
 ```
 
-# Deploy an application with Kubeapps
+**Deploy an application with Kubeapps**
 
 Once you have the Kubeapps Dashboard up and running, you can start deploying applications into your cluster.
 
@@ -110,3 +110,5 @@ Once you have the Kubeapps Dashboard up and running, you can start deploying app
 - Click the "Deploy" button
 - You can customize the deployment by editing the form or YAML configuration file. Click "Deploy" to proceed
 - The application will now be deployed. You will be able to track the new Kubernetes deployment directly from the browser
+
+Installation is Done, Enjoy!!
